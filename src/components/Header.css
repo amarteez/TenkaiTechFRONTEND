@@ -1,0 +1,100 @@
+/* src/components/Header.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative; /* Para el posicionamiento del botón de menú */
+    width: 100%;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .logo img {
+    height: 80px; /* Ajusta el tamaño según sea necesario */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre los enlaces de navegación */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem; /* Tamaño de la fuente de los enlaces de navegación */
+    transition: color 0.3s ease; /* Transición en el color del texto */
+}
+
+header nav a:hover {
+    color: #ff69b4; /* Cambia el color en hover */
+}
+
+header .menu-toggle {
+    display: none; /* Ocultar el botón en pantallas grandes */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1; /* Asegura que el botón esté encima del contenido */
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: flex-start; /* Alinea el contenido en pantallas pequeñas */
+    }
+
+    header .logo {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0; /* Oculta el menú inicialmente */
+        overflow: hidden; /* Oculta el contenido que sobresale */
+        opacity: 0; /* Oculta el menú inicialmente */
+        transition: max-height 0.5s ease, opacity 0.5s ease; /* Animación de apertura/cierre */
+    }
+
+    header nav.open {
+        max-height: 500px; /* Ajusta este valor según el tamaño del menú */
+        opacity: 1; /* Muestra el menú */
+    }
+
+    header nav a {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    header .menu-toggle {
+        display: block; /* Muestra el botón en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 769px) {
+    header.fixed .menu-toggle {
+        display: block; /* Muestra el botón en pantallas grandes al hacer scroll */
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    header.fixed nav {
+        display: none; /* Oculta el menú de navegación en pantallas grandes al hacer scroll */
+    }
+}

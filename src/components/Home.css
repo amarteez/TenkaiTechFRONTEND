@@ -1,0 +1,94 @@
+/* Home.css */
+
+.home-container {
+    background-color: #000000;
+    padding: 20px;
+    color: rgba(179, 64, 224, 0.767);
+    text-align: center;
+    position: relative; /* Asegura que los elementos posicionados dentro del contenedor estén en relación a este */
+}
+
+.home-image-container {
+    margin-bottom: 20px; /* Ajusta el espacio inferior según sea necesario */
+}
+
+.home-image {
+    width: 100%; /* Ajusta el tamaño de la imagen según sea necesario */
+    max-height: 580px; /* Ajusta el tamaño máximo de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+}
+
+.home-text {
+    margin-top: 20px;
+}
+
+.home-text h2 {
+    color: #b340e0; /* Color ajustado del título */
+    font-size: 2rem;
+}
+
+.home-text p {
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.products-button {
+    margin-top: 20px; /* Ajusta el espacio superior según sea necesario */
+}
+
+.custom-button {
+    display: inline-block;
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin-top: 20px; /* Añade espacio adicional para separar el botón del contenido anterior */
+    position: relative;
+    z-index: 1; /* Asegura que el botón esté por encima de la animación */
+    overflow: hidden; /* Asegura que el contenido no se salga de los bordes redondeados */
+    text-decoration: none; /* Asegura que no haya subrayado en el enlace */
+}
+
+.custom-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        #8ae0db, #7f00b2, #02aeb4, #7f00b2,
+        #5dc1b9, #7f00b2, #02979c, #7f00b2
+    );
+    background-size: 400%;
+    border-radius: 50%;
+    filter: blur(8px);
+    transition: all 0.3s ease-in-out; /* Asegura una transición suave */
+}
+
+.custom-button:hover::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}

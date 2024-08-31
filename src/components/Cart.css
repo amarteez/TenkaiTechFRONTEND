@@ -1,0 +1,108 @@
+/* src/components/Cart.css */
+
+/* Contenedor principal del carrito */
+.cart-container {
+    background-color: rgba(173, 173, 173, 0.692); /* Fondo para el carrito */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.575);
+    margin: 20px;
+}
+
+.cart-container h2 {
+    margin-bottom: 16px;
+    font-size: 1.5em;
+    color: var(--color-primary); /* Título del carrito en negro */
+}
+
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espacio entre ítems del carrito */
+}
+
+/* Estilo para cada ítem en el carrito */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: rgb(255, 255, 255); /* Fondo de los ítems en rosado/morado */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.308);
+}
+
+.cart-item h3 {
+    margin: 0;
+    color: var(--color-primary); /* Nombre del ítem en negro */
+}
+
+.cart-item p {
+    margin: 0;
+    color: #000000; /* Texto de descripción en gris oscuro */
+}
+
+.cart-item button {
+    background-color: purple; /* Botón remove */
+    color: #ffffff; /* Texto del botón en blanco */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: red; /* Botón  al pasar el ratón */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column; /* En pantallas más pequeñas, los ítems se mostrarán en columna */
+        align-items: flex-start;
+    }
+
+    .cart-item button {
+        margin-top: 12px; /* Espacio arriba del botón en pantallas pequeñas */
+    }
+}
+
+.cart-summary {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.308);
+}
+
+.cart-summary p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.cart-summary h3 {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.whatsapp-button {
+    display: inline-block;
+    width: auto;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #00ff37;
+}

@@ -1,0 +1,17 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
+}
+
+.App-header {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
+}

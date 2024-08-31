@@ -1,0 +1,31 @@
+/* src/components/ProductCategory.css */
+
+/* Estilo para el contenedor de la categoría de productos */
+.product-category {
+    padding: 20px;
+    border: 1px solid #a50000; /* Ajustar el color del borde */
+    border-radius: 8px;
+    background-color: var(--color-background); /* Color de fondo claro */
+    margin: 20px auto; /* Margen automático para centrar el contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+.product-category h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: var(--color-primary); /* Título en color negro */
+    text-align: center; /* Centrar el título */
+}
+
+/* Asegúrate de que el ProductList dentro de la categoría tenga los mismos estilos */
+.product-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0; /* Eliminar padding adicional para la lista dentro de la categoría */
+}
+
+.category-container {
+    border: none; /* Eliminar borde ya que el contenedor de la categoría ya tiene uno */
+    padding: 0;
+}
