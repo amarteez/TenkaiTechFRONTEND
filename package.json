@@ -2,7 +2,7 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://amarteez.github.io/TenkaiTechStore",
+  "homepage": "https://amarteez.github.io/TenkaiTechFRONTEND",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
