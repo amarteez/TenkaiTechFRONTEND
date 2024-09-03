@@ -5,19 +5,19 @@ import { CartProvider } from './CartContext';
 import Cart from './components/Cart';
 import Header from './components/Header';
 import Home from './components/Home';
-import ProductDetails from './components/ProductDetails'; // Importa el nuevo componente
+import ProductDetails from './components/ProductDetails';
 import ProductList from './components/ProductList';
 
 const App = () => {
     return (
         <CartProvider>
-            <Router>
+            <Router basename="/TenkaiTechFRONTEND">
                 <Header /> {/* El Header estará presente en todas las páginas */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/products" element={<ProductList />} />
                     <Route path="/cart" element={<Cart />} />
-                    <Route path="/products/:id" element={<ProductDetails />} /> {/* Nueva ruta */}
+                    <Route path="/products/:id" element={<ProductDetails />} />
                 </Routes>
             </Router>
         </CartProvider>
