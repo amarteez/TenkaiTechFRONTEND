@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../img-front/img-logo.jpg'; // Ajusta la ruta si es necesario
+import { Link } from 'react-router-dom';
+import logo from '../img-front/img-logo.jpg';
 import './Header.css';
 
 const Header = () => {
@@ -31,9 +32,9 @@ const Header = () => {
                 <img src={logo} alt="Logo" />
             </div>
             <nav className={isOpen ? 'open' : ''}>
-                <a href="/">Inicio</a>
-                <a href="/products">Productos</a>
-                <a href="/cart">Carrito</a>
+                <Link to="/">Inicio</Link>
+                <Link to="/products">Productos</Link>
+                <Link to="/cart">Carrito</Link>
             </nav>
             <button className="menu-toggle" onClick={toggleMenu}>
                 ☰
