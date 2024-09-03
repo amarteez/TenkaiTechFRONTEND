@@ -13,6 +13,7 @@ const ProductDetails = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
+                // URL del backend en Render
                 const response = await axios.get(`https://tenkaitechbackend.onrender.com/api/products/${id}/`);
                 setProduct(response.data);
                 setLoading(false);

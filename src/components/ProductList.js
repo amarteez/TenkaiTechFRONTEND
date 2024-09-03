@@ -1,4 +1,3 @@
-// src/components/ProductList.js
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
@@ -15,6 +14,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         try {
+            // URL del backend en Render
             const response = await axios.get('https://tenkaitechbackend.onrender.com/api/products/');
             setProductsByCategory(response.data);
             setLoading(false);

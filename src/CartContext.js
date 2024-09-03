@@ -38,6 +38,7 @@ export const CartProvider = ({ children }) => {
     useEffect(() => {
         const fetchCartItems = async () => {
             try {
+                // URL del backend en Render
                 const response = await axios.get('https://tenkaitechbackend.onrender.com/api/cart/');
                 dispatch({ type: SET_CART_ITEMS, payload: response.data });
             } catch (error) {
@@ -50,6 +51,7 @@ export const CartProvider = ({ children }) => {
 
     const addToCart = async (product) => {
         try {
+            // URL del backend en Render
             const response = await axios.post('https://tenkaitechbackend.onrender.com/api/cart/add/', {
                 product_id: product.id,
                 quantity: 1, // Puedes ajustar la cantidad según sea necesario
@@ -69,6 +71,7 @@ export const CartProvider = ({ children }) => {
 
     const removeFromCart = async (cartItemId) => {
         try {
+            // URL del backend en Render
             await axios.post('https://tenkaitechbackend.onrender.com/api/cart/remove/', {
                 cart_item_id: cartItemId
             });
