@@ -11,7 +11,7 @@ import ProductList from './components/ProductList';
 const App = () => {
     return (
         <CartProvider>
-            <Router basename="/TenkaiTechFRONTEND">
+            <Router>
                 <Header /> {/* El Header estará presente en todas las páginas */}
                 <Routes>
                     <Route path="/" element={<Home />} />
